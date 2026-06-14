@@ -1,14 +1,5 @@
-/* =========================================================
-   FINKA BANK — SCRIPT
-   Mobile menu, loan calculator, news "show more",
-   testimonials slider, contact form validation
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------------------------------------------------------
-     1. MOBILE MENU (burger toggle)
-     --------------------------------------------------------- */
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
 
@@ -18,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.toggle('burger--open');
     });
 
-    // Close menu after clicking a link (mobile)
     nav.querySelectorAll('.nav__link').forEach((link) => {
       link.addEventListener('click', () => {
         nav.classList.remove('nav--open');
@@ -27,11 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------------------------------------------------------
-     2. LOAN CALCULATOR (annuity formula)
-     Monthly payment = P * (r * (1+r)^n) / ((1+r)^n - 1)
-     where P = amount, r = monthly rate, n = term in months
-     --------------------------------------------------------- */
   const amountInput = document.getElementById('amount');
   const termInput = document.getElementById('term');
   const rateInput = document.getElementById('rate');
@@ -51,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const termMonths = parseInt(termInput.value, 10);
     const annualRate = parseFloat(rateInput.value);
 
-    // Convert the annual percentage rate to a monthly decimal rate
     const monthlyRate = annualRate / 100 / 12;
 
     let monthlyPayment;
@@ -78,9 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     calculate(); // initial render
   }
 
-  /* ---------------------------------------------------------
-     3. NEWS — "Показать ещё" button
-     --------------------------------------------------------- */
   const showMoreBtn = document.getElementById('showMoreBtn');
 
   if (showMoreBtn) {
@@ -96,9 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------------------------------------------------------
-     4. TESTIMONIALS SLIDER (no libraries)
-     --------------------------------------------------------- */
   const sliderTrack = document.getElementById('sliderTrack');
   const sliderPrev = document.getElementById('sliderPrev');
   const sliderNext = document.getElementById('sliderNext');
@@ -108,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = sliderTrack.querySelectorAll('.slide');
     let currentSlide = 0;
 
-    // Build the dots dynamically based on the number of slides
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
       dot.classList.add('slider__dot');
@@ -133,9 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderNext.addEventListener('click', () => goToSlide(currentSlide + 1));
   }
 
-  /* ---------------------------------------------------------
-     5. CONTACT FORM VALIDATION (contacts.html)
-     --------------------------------------------------------- */
   const feedbackForm = document.getElementById('feedbackForm');
 
   if (feedbackForm) {
@@ -164,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let isValid = true;
 
-      // Name: required, at least 2 characters
       if (nameInput.value.trim().length < 2) {
         setError(nameInput, nameError, 'Введите имя (минимум 2 символа)');
         isValid = false;
@@ -172,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearError(nameInput, nameError);
       }
 
-      // Phone: required, simple pattern check
       const phonePattern = /^[+\d][\d\s\-()]{6,}$/;
       if (!phonePattern.test(phoneInput.value.trim())) {
         setError(phoneInput, phoneError, 'Введите номер телефона, например +996 700 000 000');
@@ -181,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearError(phoneInput, phoneError);
       }
 
-      // Message: required, at least 5 characters
       if (messageInput.value.trim().length < 5) {
         setError(messageInput, messageError, 'Опишите вопрос (минимум 5 символов)');
         isValid = false;
@@ -195,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Clear error as soon as the user starts fixing a field
     [nameInput, phoneInput, messageInput].forEach((input) => {
       input.addEventListener('input', () => {
         const errorEl = input.nextElementSibling;
@@ -205,5 +175,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
 });

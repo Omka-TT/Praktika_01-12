@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finka Bank — простые финансы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img class="logo__image" src="images/finka.jpg" alt="Логотип Finka Bank" onerror="this.style.display='none'">
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#products" class="nav__link">Продукты</a>
+        <a href="#calculator" class="nav__link">Калькулятор</a>
+        <a href="#news" class="nav__link">Новости</a>
+        <a href="#advantages" class="nav__link">О банке</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <a href="#calculator" class="btn btn--primary header__cta">Открыть счёт</a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Finka Bank · с 2025 года</p>
+        <h1 class="hero__title">Деньги без сложных условий</h1>
+        <p class="hero__lead">
+          Карты, вклады и кредиты — разберётесь за пять минут, оформите
+          ещё быстрее. Никаких сносок мелким шрифтом.
+        </p>
+        <div class="hero__actions">
+          <a href="#products" class="btn btn--primary">Смотреть продукты</a>
+          <a href="#calculator" class="btn btn--ghost">Рассчитать кредит</a>
+        </div>
+      </div>
+
+      <div class="hero__card" aria-hidden="true">
+        <p class="hero__card-label">Платёж по кредиту</p>
+        <p class="hero__card-value">12 480 сом<span>/мес</span></p>
+        <div class="hero__card-row">
+          <span>Сумма</span><span>500 000 сом</span>
+        </div>
+        <div class="hero__card-row">
+          <span>Срок</span><span>48 мес.</span>
+        </div>
+        <div class="hero__card-row">
+          <span>Ставка</span><span>14,9%</span>
+        </div>
+        <a href="#calculator" class="hero__card-link">Свой расчёт →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="products">
+    <div class="container">
+      <p class="section__eyebrow">Продукты</p>
+      <h2 class="section__title">Три способа управлять деньгами</h2>
+
+      <div class="products__grid">
+
+        <article class="card">
+          <div class="card__icon card__icon--mint">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3 class="card__title">Карты</h3>
+          <p class="card__text">Дебетовая карта с кэшбэком до 5% и бесплатным обслуживанием при покупках от 50 000 сом в месяц.</p>
+          <ul class="card__list">
+            <li>Выпуск онлайн за 10 минут</li>
+            <li>Бесплатные переводы между своими счетами</li>
+            <li>Уведомления о каждой операции</li>
+          </ul>
+          <a href="#calculator" class="card__link">Подробнее →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--gold">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>
+          </div>
+          <h3 class="card__title">Вклады</h3>
+          <p class="card__text">Сберегательный счёт со ставкой до 11% годовых. Пополнение и частичное снятие без потери процентов.</p>
+          <ul class="card__list">
+            <li>Открытие без визита в отделение</li>
+            <li>Проценты начисляются ежемесячно</li>
+            <li>Минимальная сумма — 10 000 сом</li>
+          </ul>
+          <a href="#calculator" class="card__link">Подробнее →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon card__icon--navy">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="card__title">Кредиты</h3>
+          <p class="card__text">Потребительский кредит от 12,9% годовых, решение по заявке — в течение часа.</p>
+          <ul class="card__list">
+            <li>Сумма от 50 000 до 3 000 000 сом</li>
+            <li>Срок от 6 до 60 месяцев</li>
+            <li>Досрочное погашение без штрафов</li>
+          </ul>
+          <a href="#calculator" class="card__link">Рассчитать →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOAN CALCULATOR ===== -->
+  <section class="calculator" id="calculator">
+    <div class="container calculator__inner">
+      <div class="calculator__intro">
+        <p class="section__eyebrow section__eyebrow--light">Калькулятор</p>
+        <h2 class="section__title section__title--light">Узнайте платёж заранее</h2>
+        <p class="calculator__text">
+          Передвигайте ползунки — расчёт обновляется сразу. Это ориентировочная
+          сумма: точная ставка зависит от срока и истории клиента.
+        </p>
+      </div>
+
+      <div class="calculator__card">
+        <div class="field">
+          <div class="field__head">
+            <label for="amount">Сумма кредита</label>
+            <span class="field__value" id="amountValue">500 000 сом</span>
+          </div>
+          <input type="range" id="amount" min="50000" max="3000000" step="10000" value="500000">
+        </div>
+
+        <div class="field">
+          <div class="field__head">
+            <label for="term">Срок</label>
+            <span class="field__value" id="termValue">48 мес.</span>
+          </div>
+          <input type="range" id="term" min="6" max="60" step="1" value="48">
+        </div>
+
+        <div class="field">
+          <div class="field__head">
+            <label for="rate">Ставка, % годовых</label>
+            <span class="field__value" id="rateValue">14,9%</span>
+          </div>
+          <input type="range" id="rate" min="12.9" max="19.9" step="0.1" value="14.9">
+        </div>
+
+        <div class="calculator__result">
+          <p class="calculator__result-label">Ежемесячный платёж</p>
+          <p class="calculator__result-value" id="paymentValue">13 245 сом</p>
+          <p class="calculator__result-sub" id="totalValue">Всего к выплате: 635 760 сом</p>
+        </div>
+
+        <a href="contacts.html" class="btn btn--primary calculator__cta">Подать заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS & PROMOTIONS ===== -->
+  <section class="news" id="news">
+    <div class="container">
+      <p class="section__eyebrow">Новости и акции</p>
+      <h2 class="section__title">Что нового в Finka</h2>
+
+      <div class="news__grid" id="newsGrid">
+
+        <article class="news-card">
+          <div class="news-card__image news-card__image--1">
+     
+            <img src="images/IMG-1.jpg" alt="Кэшбэк на кафе и доставку еды" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">10 июня 2025</p>
+          <h3 class="news-card__title">Кэшбэк 5% на кафе и доставку еды</h3>
+          <p class="news-card__text">До конца лета повышенный кэшбэк по дебетовой карте на категории «Рестораны» и «Доставка».</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__image news-card__image--2">
+            <!-- Положите файл в папку images и назовите его "news-2.jpg" -->
+            <img src="images/IMG-2.jpg" alt="Вклад «Летний»" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">3 июня 2025</p>
+          <h3 class="news-card__title">Вклад «Летний» со ставкой 11%</h3>
+          <p class="news-card__text">Новый сезонный вклад на 6 месяцев с возможностью пополнения без снижения ставки.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card__image news-card__image--3">
+            <!-- Положите файл в папку images и назовите его "news-3.jpg" -->
+            <img src="images/IMG-3.jpg" alt="Снижена ставка по кредиту наличными" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">28 мая 2025</p>
+          <h3 class="news-card__title">Снижена ставка по кредиту наличными</h3>
+          <p class="news-card__text">Минимальная ставка по потребительскому кредиту снижена до 12,9% годовых.</p>
+        </article>
+
+        <article class="news-card news-card--hidden">
+          <div class="news-card__image news-card__image--4">
+            <!-- Положите файл в папку images и назовите его "news-4.jpg" -->
+            <img src="images/IMG-4.jpg" alt="Новое отделение в центре города" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">20 мая 2025</p>
+          <h3 class="news-card__title">Новое отделение в центре города</h3>
+          <p class="news-card__text">Открылось ещё одно отделение Finka Bank — адрес и часы работы на странице контактов.</p>
+        </article>
+
+        <article class="news-card news-card--hidden">
+          <div class="news-card__image news-card__image--5">
+            <!-- Положите файл в папку images и назовите его "news-5.jpg" -->
+            <img src="images/IMG-5.jpg" alt="Обновлённое мобильное приложение" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">14 мая 2025</p>
+          <h3 class="news-card__title">Обновлённое мобильное приложение</h3>
+          <p class="news-card__text">Новый дизайн, быстрый вход по отпечатку и история операций с фильтрами.</p>
+        </article>
+
+        <article class="news-card news-card--hidden">
+          <div class="news-card__image news-card__image--6">
+            <!-- Положите файл в папку images и назовите его "news-6.jpg" -->
+            <img src="images/IMG-6.jpg" alt="Бесплатные переводы по номеру телефона" onerror="this.style.display='none'">
+          </div>
+          <p class="news-card__date">2 мая 2025</p>
+          <h3 class="news-card__title">Бесплатные переводы по номеру телефона</h3>
+          <p class="news-card__text">Переводы клиентам Finka Bank по номеру телефона теперь без комиссии.</p>
+        </article>
+
+      </div>
+
+      <div class="news__more">
+        <button class="btn btn--ghost" id="showMoreBtn">Показать ещё</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADVANTAGES ===== -->
+  <section class="advantages" id="advantages">
+    <div class="container">
+      <p class="section__eyebrow">Почему Finka</p>
+      <h2 class="section__title">Банк, который не усложняет</h2>
+
+      <div class="advantages__grid">
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="advantage__title">Без скрытых комиссий</h3>
+          <p class="advantage__text">Все условия — на одной странице, простым языком, без звёздочек.</p>
+        </div>
+
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="advantage__title">Поддержка 24/7</h3>
+          <p class="advantage__text">Чат и звонок в приложении — отвечаем в течение пары минут в любое время.</p>
+        </div>
+
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+          </div>
+          <h3 class="advantage__title">Всё в приложении</h3>
+          <p class="advantage__text">Открыть счёт, подать заявку на кредит и оформить карту — без визита в банк.</p>
+        </div>
+
+        <div class="advantage">
+          <div class="advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 14H6a2 2 0 0 0-2 2v4h16v-4a2 2 0 0 0-2-2h-3"/></svg>
+          </div>
+          <h3 class="advantage__title">Понятные менеджеры</h3>
+          <p class="advantage__text">Объясняем условия по-человечески и не торопим с решением.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SLIDER ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <p class="section__eyebrow">Отзывы</p>
+      <h2 class="section__title">Что говорят клиенты</h2>
+
+      <div class="slider">
+        <div class="slider__track" id="sliderTrack">
+
+          <figure class="slide">
+            <!-- Положите файл в папку images и назовите его "avatar-1.jpg" -->
+            <img class="slide__avatar" src="images/avatar-1.jpg" alt="Алия С." onerror="this.style.display='none'">
+            <blockquote class="slide__quote">
+              «Оформила вклад прямо из приложения вечером, без поездки в отделение.
+              Ставка оказалась даже выше, чем я ожидала.»
+            </blockquote>
+            <figcaption class="slide__author">Алия С., клиент с 2025 года</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <!-- Положите файл в папку images и назовите его "avatar-2.jpg" -->
+            <img class="slide__avatar" src="images/avatar-2.jpg" alt="Марат Т." onerror="this.style.display='none'">
+            <blockquote class="slide__quote">
+              «Калькулятор на сайте показал ровно ту сумму, что в итоге пришла
+              в договоре. Никаких сюрпризов с платежом.»
+            </blockquote>
+            <figcaption class="slide__author">Марат Т., клиент с 2024 года</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <!-- Положите файл в папку images и назовите его "avatar-3.jpg" -->
+            <img class="slide__avatar" src="images/avatar-3.jpg" alt="Динара К." onerror="this.style.display='none'">
+            <blockquote class="slide__quote">
+              «Понравилось, что поддержка отвечает быстро и по-человечески,
+              без скриптов и шаблонных фраз.»
+            </blockquote>
+            <figcaption class="slide__author">Динара К., клиент с 2025 года</figcaption>
+          </figure>
+
+        </div>
+
+        <div class="slider__controls">
+          <button class="slider__btn" id="sliderPrev" aria-label="Предыдущий отзыв">←</button>
+          <div class="slider__dots" id="sliderDots"></div>
+          <button class="slider__btn" id="sliderNext" aria-label="Следующий отзыв">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="logo logo--footer">
+
+          <span class="logo__mark">Fin<span class="logo__accent">ka</span></span>
+          <span class="logo__sub">Bank</span>
+        </a>
+        <p class="footer__text">Простой банк для повседневных решений.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Telegram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Продукты</h4>
+        <a href="#products" class="footer__link">Карты</a>
+        <a href="#products" class="footer__link">Вклады</a>
+        <a href="#products" class="footer__link">Кредиты</a>
+        <a href="#calculator" class="footer__link">Калькулятор</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Банк</h4>
+        <a href="#advantages" class="footer__link">О банке</a>
+        <a href="#news" class="footer__link">Новости</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Реквизиты</h4>
+        <p class="footer__text">АО «Finka Bank»</p>
+        <p class="footer__text">БИН 990140001234</p>
+        <p class="footer__text">Лицензия НБ КР № 0123 от 01.02.2010</p>
+      </div>
+
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2025 Finka Bank. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
